@@ -3,9 +3,16 @@ import React, { useState, useEffect, useRef } from 'react';
 const CustomCursor = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const cursorRef = useRef(null);
 
   useEffect(() => {
+    // Hide cursor on touch/mobile devices
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      setIsTouchDevice(true);
+      return;
+    }
+
     const handleMouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
       if (cursorRef.current) {
@@ -27,6 +34,8 @@ const CustomCursor = () => {
       window.removeEventListener('mouseover', handleMouseOver);
     };
   }, []);
+
+  if (isTouchDevice) return null;
 
   return (
     <>
@@ -51,3 +60,4 @@ const CustomCursor = () => {
 };
 
 export default CustomCursor;
+

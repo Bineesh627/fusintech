@@ -203,7 +203,7 @@ const InnovationsPage = () => {
       `}</style>
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section ref={heroRef} className="relative min-h-screen flex flex-col px-6 pt-30">
+      <section ref={heroRef} className="relative min-h-screen flex flex-col px-4 sm:px-6 pt-24 sm:pt-30">
         {/* Dynamic cursor glow */}
         <div
           className="fixed w-[500px] h-[500px] rounded-full pointer-events-none z-0 transition-all duration-300"
@@ -242,14 +242,14 @@ const InnovationsPage = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] tracking-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] tracking-tight mb-4 sm:mb-6">
             <span className="block text-white">The Future of</span>
             <span className="block bg-clip-text text-transparent bg-gradient-to-r from-[#00E5FF] via-[#2D7FF9] to-[#7C3AED]">
               Learning is AI
             </span>
           </h1>
 
-          <p className="text-[#A0A0A0] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12 font-light">
+          <p className="text-[#A0A0A0] text-sm sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-12 font-light px-2">
             Most online courses make you pause, rewind, and search elsewhere when you're confused.
             We're building something that <span className="text-white font-medium">responds to you in real time</span> keeping your focus intact and learning flowing.
           </p>
@@ -257,7 +257,7 @@ const InnovationsPage = () => {
           {/* CTA — Notify Me */}
           <div className="max-w-md w-full mx-auto">
             {!submitted ? (
-              <form onSubmit={handleSubmit} className="flex gap-2 p-1.5 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 p-2 sm:p-1.5 bg-white/5 border border-white/10 rounded-2xl sm:rounded-full backdrop-blur-sm">
                 <input
                   type="email"
                   value={emailValue}
@@ -287,7 +287,7 @@ const InnovationsPage = () => {
       </section>
 
       {/* ── PROBLEM STATEMENT ─────────────────────────────────── */}
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#7C3AED]/5 rounded-full blur-[120px]" />
         </div>
@@ -301,7 +301,7 @@ const InnovationsPage = () => {
               Learning Shouldn't Feel Like{' '}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#7C3AED] to-[#2D7FF9]">Searching in the Dark</span>
             </h2>
-            <p className="text-[#A0A0A0] text-lg max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-[#A0A0A0] text-sm sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
               Today, most online learning platforms rely on predefined video content. When a learner gets confused mid-lesson,
               they must pause, search elsewhere, or rewatch breaking concentration and reducing efficiency.
             </p>
@@ -355,7 +355,7 @@ const InnovationsPage = () => {
       </section>
 
       {/* ── STATS ────────────────────────────────────────────────── */}
-      <section className="py-24 px-6 border-y border-white/5 relative">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 border-y border-white/5 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-[#2D7FF9]/5 via-transparent to-[#7C3AED]/5 pointer-events-none" />
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
           <Counter target={3} suffix="x" label="Faster Clarification" />
@@ -376,7 +376,7 @@ const InnovationsPage = () => {
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
               Built Around <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00E5FF] to-[#2D7FF9]">Your Understanding.</span>
             </h2>
-            <p className="text-[#A0A0A0] text-lg max-w-2xl mx-auto font-light">
+            <p className="text-[#A0A0A0] text-sm sm:text-lg max-w-2xl mx-auto font-light">
               The goal isn't more content it's better delivery. Every feature improves
               how content is <span className="text-white">experienced</span>, not just consumed.
             </p>

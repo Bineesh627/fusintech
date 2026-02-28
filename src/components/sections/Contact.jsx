@@ -6,7 +6,7 @@ import MagneticButton from '../ui/MagneticButton';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 px-6 relative overflow-hidden">
+    <section id="contact" className="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
       {/* ── Background layers ─────────────────────────────── */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#080610] via-[#0A0C14] to-[#060810] pointer-events-none" />
       {/* Large blue orb — bottom center */}
@@ -27,12 +27,12 @@ const Contact = () => {
 
       <div className="max-w-5xl mx-auto">
         <Reveal direction="down" className="text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-display font-bold mb-6">Initiate Collaboration.</h2>
-          <p className="text-[#A0A0A0] text-xl max-w-2xl mx-auto">Secure a direct line to our architectural team for enterprise deployment and strategic partnerships.</p>
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-display font-bold mb-4 sm:mb-6">Initiate Collaboration.</h2>
+          <p className="text-[#A0A0A0] text-base sm:text-xl max-w-2xl mx-auto">Secure a direct line to our architectural team for enterprise deployment and strategic partnerships.</p>
         </Reveal>
         
         <Reveal delay={200} direction="up">
-          <SpotlightCard className="p-8 md:p-12 border-white/10 glass-panel shadow-2xl interactive-element">
+          <SpotlightCard className="p-6 sm:p-8 md:p-12 border-white/10 glass-panel shadow-2xl interactive-element">
             <form onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="relative group">

@@ -13,7 +13,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section id="team" className="py-24 px-6 relative border-t border-white/5 overflow-hidden">
+    <section id="team" className="py-16 sm:py-24 px-4 sm:px-6 relative border-t border-white/5 overflow-hidden">
       {/* ── Background layers ─────────────────────────────── */}
       <div className="absolute inset-0 bg-gradient-to-bl from-[#060A09] via-[#050505] to-[#060810] pointer-events-none" />
       {/* Teal top-left orb */}
@@ -36,10 +36,10 @@ const Team = () => {
         {/* Header */}
         <div className="text-center mb-16 relative z-10">
           <Reveal direction="up">
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-[#00E5FF]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-[#00E5FF]">
               Our Team
             </h2>
-            <p className="text-[#A0A0A0] text-lg font-display tracking-wide">
+            <p className="text-[#A0A0A0] text-sm sm:text-lg font-display tracking-wide">
               The brilliant minds behind our technology
             </p>
           </Reveal>

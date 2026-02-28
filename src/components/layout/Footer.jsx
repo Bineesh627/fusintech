@@ -15,23 +15,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#050505] pt-24 pb-8 border-t border-white/5 px-6 relative overflow-hidden flex flex-col justify-between min-h-[420px]">
+    <footer className="bg-[#050505] pt-16 sm:pt-24 pb-8 border-t border-white/5 px-4 sm:px-6 relative overflow-hidden flex flex-col justify-between min-h-[380px] sm:min-h-[420px]">
       {/* Top gradient line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[#2D7FF9]/50 to-transparent z-20" />
 
       {/* Large background watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
-        <span className="text-[18vw] leading-none font-display font-black text-[#0A0A0A] tracking-tighter whitespace-nowrap">
+        <span className="text-[24vw] sm:text-[18vw] leading-none font-display font-black text-[#0A0A0A] tracking-tighter whitespace-nowrap">
           FUSINTECH
         </span>
       </div>
 
       {/* Main grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16 relative z-20 w-full mt-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-16 mb-12 sm:mb-16 relative z-20 w-full mt-6 sm:mt-10">
 
         {/* Brand */}
-        <div className="lg:col-span-1">
-          <Link to="/" className="text-2xl font-display font-bold tracking-tight flex items-center gap-3 mb-5 interactive-element text-white">
+        <div className="col-span-2 sm:col-span-2 lg:col-span-1">
+          <Link to="/" className="text-xl sm:text-2xl font-display font-bold tracking-tight flex items-center gap-3 mb-4 sm:mb-5 interactive-element text-white">
             <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#2D7FF9] to-[#00E5FF] flex items-center justify-center">
               <span className="text-white text-sm font-bold">F</span>
             </div>

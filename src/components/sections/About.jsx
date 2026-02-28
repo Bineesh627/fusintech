@@ -6,7 +6,7 @@ import TiltElement from '../ui/TiltElement';
 
 const About = () => {
   return (
-    <section id="aboutus" className="py-32 px-6 relative border-t border-white/5 overflow-hidden">
+    <section id="aboutus" className="py-20 sm:py-32 px-4 sm:px-6 relative border-t border-white/5 overflow-hidden">
       {/* ── Background layers ─────────────────────────────── */}
       {/* Base gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#060810] via-[#050505] to-[#080610] pointer-events-none" />
@@ -28,7 +28,7 @@ const About = () => {
       <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-[#2D7FF9]/40 to-transparent pointer-events-none" />
 
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
         
         {/* Left: Content */}
         <div>
@@ -37,11 +37,11 @@ const About = () => {
               <div className="h-px w-12 bg-[#2D7FF9]"></div>
               <h2 className="text-sm font-bold text-[#2D7FF9] tracking-widest uppercase">About Us</h2>
             </div>
-            <h3 className="text-5xl md:text-6xl font-display font-bold mb-8 leading-tight">Where Future<br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500">Meets Intelligence.</span></h3>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 sm:mb-8 leading-tight">Where Future<br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500">Meets Intelligence.</span></h3>
           </Reveal>
           
           <Reveal delay={200} direction="up">
-            <p className="text-[#A0A0A0] text-xl leading-relaxed mb-10 font-light">
+            <p className="text-[#A0A0A0] text-base sm:text-xl leading-relaxed mb-8 sm:mb-10 font-light">
               Established as a sovereign technological entity, Fusin Technology was founded on a singular premise: The future belongs to those who can fuse distinct technologies into a unified intelligent force. We dismantle the barriers between hardware and software, designing solutions that empower enterprises to think smarter and act autonomously.
             </p>
           </Reveal>
@@ -65,7 +65,7 @@ const About = () => {
         </div>
 
         {/* Right: 3D Interactive Visual */}
-        <Reveal delay={400} direction="right" className="flex justify-center">
+        <Reveal delay={400} direction="right" className="hidden lg:flex justify-center">
           <TiltElement className="w-full max-w-md aspect-square relative interactive-element">
             <div className="absolute inset-0 bg-gradient-to-tr from-[#2D7FF9]/20 to-[#00E5FF]/20 rounded-full blur-3xl animate-pulse"></div>
             <div className="w-full h-full glass-panel rounded-3xl p-8 flex items-center justify-center relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/20">

@@ -7,20 +7,26 @@ import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import ContactPage from './components/pages/ContactPage';
 import InnovationsPage from './components/pages/InnovationsPage';
+import ScrollToTop from './components/ui/ScrollToTop';
 
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#0F1115] text-white font-sans selection:bg-[#2D7FF9] selection:text-white overflow-x-hidden cursor-none">
-        
+      <div className="min-h-screen bg-[#0F1115] text-white font-sans selection:bg-[#2D7FF9] selection:text-white overflow-x-hidden">
+        <ScrollToTop />
         {/* Font & Global CSS */}
         <style dangerouslySetInnerHTML={{__html: `
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
           :root { --font-inter: 'Inter', sans-serif; --font-space-grotesk: 'Space Grotesk', sans-serif; }
           .font-sans { font-family: var(--font-inter); }
           .font-display { font-family: var(--font-space-grotesk); }
-          html, body { cursor: none !important; scroll-behavior: smooth; }
-          a, button, input, select, textarea { cursor: none !important; }
+          html, body { scroll-behavior: smooth; }
+          @media (pointer: fine) {
+            html, body, a, button, input, select, textarea { cursor: none !important; }
+          }
+          @media (pointer: coarse) {
+            html, body, a, button, input, select, textarea { cursor: auto !important; }
+          }
           
           @keyframes shine {
             0% { transform: translateX(-100%) skewX(-15deg); }

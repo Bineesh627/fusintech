@@ -5,7 +5,7 @@ import SpotlightCard from '../ui/SpotlightCard';
 
 const Innovations = () => {
   return (
-    <section id="innovations" className="py-32 px-6 relative overflow-hidden">
+    <section id="innovations" className="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
       {/* ── Background layers ─────────────────────────────── */}
       <div className="absolute inset-0 bg-gradient-to-tr from-[#07080D] via-[#0F1115] to-[#090810] pointer-events-none" />
       {/* Central purple depth orb */}
@@ -28,14 +28,14 @@ const Innovations = () => {
         <div className="text-center mb-20 relative z-10">
           <Reveal direction="down">
             <h2 className="text-sm font-bold text-[#2D7FF9] tracking-widest uppercase mb-4">Capabilities</h2>
-            <h3 className="text-5xl md:text-6xl font-display font-bold">Engineering the Impossible.</h3>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold">Engineering the Impossible.</h3>
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px] relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 md:auto-rows-[300px] relative z-10">
           
           {/* Card 1: AI (Large) */}
-          <Reveal delay={100} direction="up" className="md:col-span-2 md:row-span-2 interactive-element">
+          <Reveal delay={100} direction="up" className="md:col-span-2 md:row-span-2 interactive-element min-h-[300px]">
             <SpotlightCard className="h-full w-full p-10 flex flex-col justify-end relative group">
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#2D7FF9]/20 via-[#0F1115] to-[#0F1115] opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="absolute right-0 top-0 w-full h-full opacity-30 bg-mesh pointer-events-none" />

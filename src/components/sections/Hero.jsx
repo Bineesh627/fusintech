@@ -19,7 +19,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 sm:pt-20 overflow-hidden">
       {/* ── Background base ───────────────────────────────── */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#0D1526_0%,_#080A0E_40%,_#050505_100%)] pointer-events-none" />
       {/* Parallax mesh grid */}
@@ -51,9 +51,9 @@ const Hero = () => {
       {/* Bottom fade */}
       <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center flex flex-col items-center pb-32">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center pb-24">
         <Reveal direction="down" delay={100}>
-          <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full border border-white/10 glass-panel text-[#00E5FF] text-xs font-semibold tracking-widest uppercase mt-12 mb-8 shadow-[0_0_30px_rgba(0,229,255,0.1)]">
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 rounded-full border border-white/10 glass-panel text-[#00E5FF] text-[10px] sm:text-xs font-semibold tracking-widest uppercase mt-8 sm:mt-12 mb-6 sm:mb-8 shadow-[0_0_30px_rgba(0,229,255,0.1)]">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00E5FF] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00E5FF]"></span>
@@ -63,7 +63,7 @@ const Hero = () => {
         </Reveal>
         
         <Reveal delay={200}>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] mb-8 tracking-tight drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] mb-6 sm:mb-8 tracking-tight drop-shadow-2xl">
             Shaping Tomorrow with<br />
             <span className="relative inline-block mt-2">
                <span className="absolute -inset-2 bg-gradient-to-r from-[#2D7FF9]/20 to-[#00E5FF]/20 blur-2xl rounded-full"></span>
@@ -75,25 +75,19 @@ const Hero = () => {
         </Reveal>
 
         <Reveal delay={400}>
-          <p className="text-lg md:text-2xl text-[#A0A0A0] max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-2xl text-[#A0A0A0] max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed font-light px-2">
             Fusintech architects the adaptive AI and quantum infrastructure that powers the next generation of global industry. <strong className="text-white font-medium">We architect the future.</strong>
           </p>
         </Reveal>
 
-        <Reveal delay={500} direction="up" className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto z-20 relative">
-          <MagneticButton variant="primary">
+        <Reveal delay={500} direction="up" className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full px-4 sm:w-auto z-20 relative">
+          <MagneticButton variant="primary" className="w-full sm:w-auto justify-center">
             Explore Innovations <ArrowRight size={18} />
           </MagneticButton>
-          <MagneticButton variant="outline">
+          <MagneticButton variant="outline" className="w-full sm:w-auto justify-center">
             Initiate Contact
           </MagneticButton>
         </Reveal>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce z-20 pointer-events-none">
-        <span className="text-xs uppercase tracking-widest text-[#00E5FF]">Scroll</span>
-        <div className="w-px h-12 bg-gradient-to-b from-[#00E5FF] to-transparent"></div>
       </div>
     </section>
   );

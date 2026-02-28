@@ -6,7 +6,7 @@ import bineeshImg from '../../assets/bineesh.jpeg';
 
 const Founder = () => {
   return (
-    <section id="founder" className="pt-[120px] pb-24 px-6 relative overflow-hidden">
+    <section id="founder" className="pt-20 sm:pt-[120px] pb-16 sm:pb-24 px-4 sm:px-6 relative overflow-hidden">
       {/* ── Background layers ─────────────────────────────── */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#08090E] via-[#0A0C10] to-[#060810] pointer-events-none" />
       {/* Large right-side blue orb */}
@@ -31,9 +31,9 @@ const Founder = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* Left: Content */}
-          <div className="lg:col-span-7 order-2 lg:order-1 relative z-10 space-y-8 pr-0 lg:pr-4">
+          <div className="lg:col-span-7 order-2 lg:order-1 relative z-10 space-y-6 sm:space-y-8 pr-0 lg:pr-4">
             <Reveal direction="up">
-              <h2 className="text-4xl md:text-5xl lg:text-[3.25rem] font-display font-bold text-[#00E5FF] leading-snug tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-[3.25rem] font-display font-bold text-[#00E5FF] leading-snug tracking-tight">
                 The Unyielding Spirit of Fusintech
               </h2>
             </Reveal>
@@ -41,14 +41,14 @@ const Founder = () => {
             <Reveal delay={200} direction="up">
               <div className="relative">
                 <span className="absolute -top-3 -left-3 text-5xl text-white/20 font-serif leading-none opacity-50 block rotate-180">"</span>
-                <p className="text-xl md:text-[1.4rem] font-medium text-white/90 italic leading-relaxed pl-6 relative z-10 font-display">
+                <p className="text-lg sm:text-xl md:text-[1.4rem] font-medium text-white/90 italic leading-relaxed pl-6 relative z-10 font-display">
                   "Fusintech is more than a company—it's a living testament to what belief can achieve. Belief in technology. Belief in purpose."
                 </p>
               </div>
             </Reveal>
             
             <Reveal delay={400} direction="up">
-              <div className="space-y-6 text-[#A0A0A0] text-base md:text-[1.05rem] leading-[1.8] font-light font-display">
+              <div className="space-y-4 sm:space-y-6 text-[#A0A0A0] text-sm sm:text-base md:text-[1.05rem] leading-[1.8] font-light font-display">
                 <p>
                   In the luminous dawn of its creation, a bold and visionary creator, Bineesh S., embarked on a transformative journey that would give birth to Fusintech. What began as a youthful dream soon evolved into a vibrant digital movement, driven by a belief in technology's power not just to innovate, but to uplift.
                 </p>
@@ -71,7 +71,7 @@ const Founder = () => {
           <div className="lg:col-span-5 order-1 lg:order-2 relative z-10 w-full">
             <Reveal direction="left">
               <TiltElement className="interactive-element w-full">
-                <SpotlightCard className="aspect-[4/5] w-full max-w-md mx-auto relative group shadow-2xl rounded-2xl overflow-hidden border border-white/10 !p-0">
+                <SpotlightCard className="aspect-[4/5] w-full max-w-xs sm:max-w-md mx-auto relative group shadow-2xl rounded-2xl overflow-hidden border border-white/10 !p-0">
                   {/* Your Image Goes Here */}
                   <img 
                     src={bineeshImg}
