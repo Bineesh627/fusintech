@@ -13,7 +13,24 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section id="team" className="py-24 px-6 bg-[#050505] relative border-t border-white/5 overflow-hidden">
+    <section id="team" className="py-24 px-6 relative border-t border-white/5 overflow-hidden">
+      {/* ── Background layers ─────────────────────────────── */}
+      <div className="absolute inset-0 bg-gradient-to-bl from-[#060A09] via-[#050505] to-[#060810] pointer-events-none" />
+      {/* Teal top-left orb */}
+      <div className="absolute -top-20 -left-20 w-[500px] h-[400px] bg-[#10B981]/8 rounded-full blur-[130px] pointer-events-none animate-pulse" style={{ animationDuration: '8s' }} />
+      {/* Blue bottom-right orb */}
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#2D7FF9]/8 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '11s', animationDelay: '3s' }} />
+      {/* Dot-grid */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-15"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(16,185,129,0.15) 1px, transparent 1px)',
+          backgroundSize: '44px 44px',
+        }}
+      />
+      {/* Top glow line */}
+      <div className="absolute top-0 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-[#10B981]/30 to-transparent pointer-events-none" />
+
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}

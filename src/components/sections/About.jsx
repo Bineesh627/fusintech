@@ -6,10 +6,28 @@ import TiltElement from '../ui/TiltElement';
 
 const About = () => {
   return (
-    <section id="aboutus" className="py-32 px-6 bg-[#050505] relative border-t border-white/5 overflow-hidden">
-      {/* Decorative Grid */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-mesh opacity-10 mask-image:linear-gradient(to_left,black,transparent)]" />
-      
+    <section id="aboutus" className="py-32 px-6 relative border-t border-white/5 overflow-hidden">
+      {/* ── Background layers ─────────────────────────────── */}
+      {/* Base gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#060810] via-[#050505] to-[#080610] pointer-events-none" />
+      {/* Blue orb left */}
+      <div className="absolute -left-40 top-1/4 w-[500px] h-[500px] rounded-full bg-[#2D7FF9]/10 blur-[140px] pointer-events-none animate-pulse" style={{ animationDuration: '7s' }} />
+      {/* Cyan orb right */}
+      <div className="absolute -right-20 bottom-1/4 w-[400px] h-[400px] rounded-full bg-[#00E5FF]/8 blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '9s', animationDelay: '2s' }} />
+      {/* Purple mid accent */}
+      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[600px] h-[200px] rounded-full bg-[#7C3AED]/5 blur-[100px] pointer-events-none" />
+      {/* Dot-grid texture */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-20"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
+          backgroundSize: '36px 36px',
+        }}
+      />
+      {/* Top-edge glow line */}
+      <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-[#2D7FF9]/40 to-transparent pointer-events-none" />
+
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
         
         {/* Left: Content */}

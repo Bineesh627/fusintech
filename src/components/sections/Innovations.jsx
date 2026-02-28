@@ -5,7 +5,24 @@ import SpotlightCard from '../ui/SpotlightCard';
 
 const Innovations = () => {
   return (
-    <section id="innovations" className="py-32 px-6 bg-[#0F1115] relative">
+    <section id="innovations" className="py-32 px-6 relative overflow-hidden">
+      {/* ── Background layers ─────────────────────────────── */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#07080D] via-[#0F1115] to-[#090810] pointer-events-none" />
+      {/* Central purple depth orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#7C3AED]/8 rounded-full blur-[160px] pointer-events-none animate-pulse" style={{ animationDuration: '10s' }} />
+      {/* Blue right accent */}
+      <div className="absolute top-0 right-0 w-[400px] h-[600px] bg-[#2D7FF9]/8 rounded-full blur-[130px] pointer-events-none animate-pulse" style={{ animationDuration: '12s', animationDelay: '1s' }} />
+      {/* Square grid */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-15"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
+          backgroundSize: '80px 80px',
+        }}
+      />
+      {/* Bottom fade-out */}
+      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none" />
+
       <div className="max-w-7xl mx-auto">
         
         <div className="text-center mb-20 relative z-10">

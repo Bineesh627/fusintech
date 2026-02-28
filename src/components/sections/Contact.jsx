@@ -6,10 +6,25 @@ import MagneticButton from '../ui/MagneticButton';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 px-6 bg-[#0F1115] relative">
-      {/* Background glow for form */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-[#2D7FF9]/10 rounded-[100%] blur-[100px] pointer-events-none" />
-      
+    <section id="contact" className="py-32 px-6 relative overflow-hidden">
+      {/* ── Background layers ─────────────────────────────── */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#080610] via-[#0A0C14] to-[#060810] pointer-events-none" />
+      {/* Large blue orb — bottom center */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#2D7FF9]/12 rounded-[100%] blur-[100px] pointer-events-none animate-pulse" style={{ animationDuration: '8s' }} />
+      {/* Purple top-right orb */}
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#7C3AED]/8 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '11s', animationDelay: '3s' }} />
+      {/* Diagonal grid lines */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-10"
+        style={{
+          backgroundImage: 'linear-gradient(135deg, rgba(45,127,249,0.08) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
+      {/* Glow line top */}
+      <div className="absolute top-0 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-[#7C3AED]/50 to-transparent pointer-events-none" />
+
+
       <div className="max-w-5xl mx-auto">
         <Reveal direction="down" className="text-center mb-16">
           <h2 className="text-5xl md:text-7xl font-display font-bold mb-6">Initiate Collaboration.</h2>

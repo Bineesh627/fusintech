@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bineesh627.github.io/fusintech/sitemap.xml

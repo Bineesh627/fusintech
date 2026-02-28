@@ -6,10 +6,27 @@ import bineeshImg from '../../assets/bineesh.jpeg';
 
 const Founder = () => {
   return (
-    <section id="founder" className="pt-[120px] pb-24 px-6 bg-[#0A0C10] relative overflow-hidden">
-      {/* Dynamic Glowing orb */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/3 w-[600px] h-[600px] bg-[#2D7FF9]/10 rounded-full blur-[120px] pointer-events-none" />
-      
+    <section id="founder" className="pt-[120px] pb-24 px-6 relative overflow-hidden">
+      {/* ── Background layers ─────────────────────────────── */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#08090E] via-[#0A0C10] to-[#060810] pointer-events-none" />
+      {/* Large right-side blue orb */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/3 w-[700px] h-[700px] bg-[#2D7FF9]/10 rounded-full blur-[140px] pointer-events-none animate-pulse" style={{ animationDuration: '9s' }} />
+      {/* Cyan bottom-left accent */}
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#00E5FF]/6 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: '12s', animationDelay: '2s' }} />
+      {/* Subtle dot grid */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-15"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(45,127,249,0.2) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+        }}
+      />
+      {/* Top glow line */}
+      <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-[#00E5FF]/30 to-transparent pointer-events-none" />
+      {/* Right vertical fade */}
+      <div className="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-[#08090E]/60 to-transparent pointer-events-none" />
+
+
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
@@ -44,7 +61,7 @@ const Founder = () => {
             {/* Signature Block */}
             <Reveal delay={600} direction="up" className="pt-6 flex items-center gap-6">
               <div>
-                <h4 className="text-lg font-bold text-white tracking-wider font-display">Bineesh S.</h4>
+                <h4 className="text-lg font-bold text-white tracking-wider font-display">Bineesh S</h4>
                 <p className="text-[#00E5FF]/80 text-[13px] font-bold tracking-[0.2em] uppercase mt-1">Founder & CEO</p>
               </div>
             </Reveal>

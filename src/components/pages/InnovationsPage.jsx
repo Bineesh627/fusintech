@@ -203,7 +203,7 @@ const InnovationsPage = () => {
       `}</style>
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section ref={heroRef} className="relative min-h-screen flex flex-col px-6 pt-36">
+      <section ref={heroRef} className="relative min-h-screen flex flex-col px-6 pt-30">
         {/* Dynamic cursor glow */}
         <div
           className="fixed w-[500px] h-[500px] rounded-full pointer-events-none z-0 transition-all duration-300"

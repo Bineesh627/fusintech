@@ -19,20 +19,37 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[#0F1115]">
-      {/* Parallax Background Elements */}
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* ── Background base ───────────────────────────────── */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#0D1526_0%,_#080A0E_40%,_#050505_100%)] pointer-events-none" />
+      {/* Parallax mesh grid */}
       <div 
-        className="absolute inset-0 bg-mesh opacity-40 transition-transform duration-1000 ease-out"
+        className="absolute inset-0 bg-mesh opacity-30 transition-transform duration-1000 ease-out"
         style={{ transform: `translate(${mousePos.x}px, ${mousePos.y}px) scale(1.05)` }}
       />
+      {/* Blue center orb — parallax */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#2D7FF9] rounded-full mix-blend-screen filter blur-[180px] opacity-20 animate-pulse pointer-events-none transition-transform duration-1000 ease-out"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[#2D7FF9] rounded-full mix-blend-screen filter blur-[200px] opacity-15 animate-pulse pointer-events-none transition-transform duration-1000 ease-out"
         style={{ transform: `translate(calc(-50% + ${-mousePos.x * 2}px), calc(-50% + ${-mousePos.y * 2}px))` }}
       />
+      {/* Cyan top-left orb — parallax */}
       <div 
-        className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-[#00E5FF] rounded-full mix-blend-screen filter blur-[150px] opacity-10 pointer-events-none transition-transform duration-1000 ease-out"
+        className="absolute top-1/4 left-1/4 w-[450px] h-[450px] bg-[#00E5FF] rounded-full mix-blend-screen filter blur-[160px] opacity-10 pointer-events-none transition-transform duration-1000 ease-out"
         style={{ transform: `translate(${mousePos.x * 3}px, ${mousePos.y * 3}px)` }}
       />
+      {/* Purple bottom-right orb — static deep accent */}
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#7C3AED]/10 rounded-full blur-[160px] pointer-events-none animate-pulse" style={{ animationDuration: '13s', animationDelay: '4s' }} />
+      {/* Noise grain overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.025]"
+        style={{
+          backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E")',
+          backgroundSize: '200px 200px',
+          mixBlendMode: 'overlay',
+        }}
+      />
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 inset-x-0 h-48 bg-gradient-to-t from-[#050505] to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center flex flex-col items-center pb-32">
         <Reveal direction="down" delay={100}>
