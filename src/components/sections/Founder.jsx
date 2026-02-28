@@ -2,6 +2,7 @@ import React from 'react';
 import Reveal from '../ui/Reveal';
 import TiltElement from '../ui/TiltElement';
 import SpotlightCard from '../ui/SpotlightCard';
+import bineeshImg from '../../assets/bineesh.jpeg';
 
 const Founder = () => {
   return (
@@ -42,12 +43,6 @@ const Founder = () => {
             
             {/* Signature Block */}
             <Reveal delay={600} direction="up" className="pt-6 flex items-center gap-6">
-              <div className="w-24 h-12 flex items-center justify-center opacity-80">
-                <svg viewBox="0 0 200 80" className="w-full h-full text-white/80 drop-shadow-md">
-                  <path fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" 
-                    d="M30,50 C50,20 20,20 40,20 C70,20 70,40 55,55 C40,70 20,45 40,35 C60,25 90,40 85,55 C80,70 100,25 110,40 C120,55 110,70 120,55 C130,40 140,20 150,40 C160,60 140,70 155,55 C170,40 160,20 175,30 C190,40 170,60 185,50" />
-                </svg>
-              </div>
               <div>
                 <h4 className="text-lg font-bold text-white tracking-wider font-display">Bineesh S.</h4>
                 <p className="text-[#00E5FF]/80 text-[13px] font-bold tracking-[0.2em] uppercase mt-1">Founder & CEO</p>
@@ -62,14 +57,9 @@ const Founder = () => {
                 <SpotlightCard className="aspect-[4/5] w-full max-w-md mx-auto relative group shadow-2xl rounded-2xl overflow-hidden border border-white/10 !p-0">
                   {/* Your Image Goes Here */}
                   <img 
-                    src="/founder-image.jpg" // Place your image in the public folder as founder-image.jpg
+                    src={bineeshImg}
                     alt="Bineesh S." 
                     className="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-105" 
-                    onError={(e) => {
-                      // Fallback image so it doesn't look broken while you haven't uploaded yours
-                      e.target.onerror = null; 
-                      e.target.src = "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=800"; 
-                    }}
                   />
                   
                   {/* Subtle gradient overlay at the bottom */}

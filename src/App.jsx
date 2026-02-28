@@ -6,6 +6,7 @@ import Footer from './components/layout/Footer';
 import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import ContactPage from './components/pages/ContactPage';
+import InnovationsPage from './components/pages/InnovationsPage';
 
 export default function App() {
   return (
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/innovations" element={<InnovationsPage />} />
         </Routes>
         
         <Footer />

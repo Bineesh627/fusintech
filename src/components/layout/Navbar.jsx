@@ -56,19 +56,16 @@ const Navbar = () => {
                 {/* Desktop Nav Items */}
                 {[
                   { label: 'Home', path: '/', hash: '' },
-                  { label: 'About', path: '/about', hash: 'about' },
-                  { label: 'Innovations', path: '/', hash: 'innovations' }
+                  { label: 'About', path: '/about', hash: '' },
+                  { label: 'Innovations', path: '/innovations', hash: '' }
                 ].map((item) => {
                   let isActive = false;
                   
                   if (item.label === 'Home') {
-                    // Home is only active if we are on '/' AND there is NO hash.
                     isActive = location.pathname === '/' && !location.hash;
                   } else if (item.label === 'Innovations') {
-                    // Innovations is active if we are on '/' AND the hash is exactly '#innovations'
-                    isActive = location.pathname === '/' && location.hash === '#innovations';
+                    isActive = location.pathname === '/innovations';
                   } else if (item.label === 'About') {
-                    // About is active if we are on '/about'
                     isActive = location.pathname === '/about';
                   }
 
@@ -107,8 +104,8 @@ const Navbar = () => {
           <div className="flex flex-col gap-8 text-center text-3xl font-display text-[#A0A0A0]">
             {[
               { label: 'Home', path: '/', hash: '', delay: 0 },
-              { label: 'About Us', path: '/about', hash: 'about', delay: 100 },
-              { label: 'Innovations', path: '/', hash: 'innovations', delay: 200 },
+              { label: 'About Us', path: '/about', hash: '', delay: 100 },
+              { label: 'Innovations', path: '/innovations', hash: '', delay: 200 },
               { label: 'Contact', path: '/contact', hash: '', delay: 300 }
             ].map((item) => {
               let isActive = false;
@@ -116,7 +113,7 @@ const Navbar = () => {
               if (item.label === 'Home') {
                 isActive = location.pathname === '/' && !location.hash;
               } else if (item.label === 'Innovations') {
-                isActive = location.pathname === '/' && location.hash === '#innovations';
+                isActive = location.pathname === '/innovations';
               } else if (item.label === 'About Us') {
                 isActive = location.pathname === '/about';
               } else if (item.label === 'Contact') {
